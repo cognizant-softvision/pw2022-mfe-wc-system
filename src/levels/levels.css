@@ -1,0 +1,102 @@
+.container {
+  height: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.bullets-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* bullet */
+.bullet {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+}
+.bullet img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s cubic-bezier(0.64, -0.52, 0.43, 1.54);
+}
+.bullet-inactive img {
+  width: 8px;
+  height: 8px;
+}
+.bullet-active img {
+  width: 17px;
+  height: 17px;
+}
+.bullet-completed img {
+  width: 8px;
+  height: 8px;
+}
+.bullet-inactive img:not(.bullet-img-for-inactive) {
+  opacity: 0;
+}
+.bullet-active img:not(.bullet-img-for-active) {
+  opacity: 0;
+}
+.bullet-completed img:not(.bullet-img-for-completed) {
+  opacity: 0;
+}
+
+/* tooltip */
+.bullet:hover::after {
+  content: attr(data-tooltip);
+  color: white;
+  background-color: black;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px;
+  border-radius: 4px;
+  position: absolute;
+  width: max-content;
+  max-width: 20ch;
+}
+
+/* tooltip arrow */
+.bullet:hover::before {
+  content: "";
+
+  border-top: 4px solid black;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 0 solid transparent;
+
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* progress bar */
+.progress-bar-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+.progress-bar-background {
+  height: 3px;
+  background-color: var(--medium-gray);
+  width: 100%;
+}
+.progress-bar {
+  height: 3px;
+  background-color: var(--dark-blue);
+  transition: width linear 0.4s;
+}

@@ -1,0 +1,221 @@
+/*
+.stepper-wrapper {
+    display: flex;
+    padding: 22px 0px 18px;
+    width: 100%;
+    z-index: 10;
+    margin: 0px auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.step {
+    display: flex;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark-plum);
+    padding: 0px;
+    overflow: visible;
+    cursor: pointer;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease 0s;
+}
+
+.step-not-done {
+    text-align: center;
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--medium-grey);
+    padding: 0px;
+    width: 60px;
+    overflow: visible;
+    cursor: default;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease 0s;
+}
+
+.step-join {
+    border-top: 4px solid var(--medium-plum);
+    border-right-color: var(--medium-plum);
+    border-bottom-color: var(--medium-plum);
+    border-left-color: var(--medium-plum);
+    height: 24px;
+    flex: 1 1 0%;
+    transition: border 0.3s ease 0s;
+}
+
+.step-join-not-done {
+    border-top: 2px solid rgb(85, 85, 85);
+    border-right-color: rgb(85, 85, 85);
+    border-bottom-color: rgb(85, 85, 85);
+    border-left-color: rgb(85, 85, 85);
+    height: 24px;
+    flex: 1 1 0%;
+    transition: border 0.3s ease 0s;
+}
+
+.step-bullet {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border-color:2px solid var(--dark-plum);
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    transition: background-color 0.3s ease 0s;
+}
+
+.step-bullet::after {
+    content: " ";
+    display: block;
+    background: transparent;
+    border-width: 2px;
+    border-style: none none solid solid;
+    position: relative;
+    height: 4px;
+    width: 8px;
+    top: 5px;
+    left: 4px;
+    border-color: var(--dark-plum);
+    transition: -webkit-transform 0.3s ease 0s, transform 0.3s ease 0s, height 0.3s ease 0s, width 0.3s ease 0s;
+    transform: rotate(-45deg);
+}
+
+[data-css-step-bullet-current]::after {
+    content: " ";
+    display: block;
+    background: transparent;
+    border-width: 2px;
+    border-style: none none solid solid;
+    position: relative;
+    height: 6px;
+    width: 6px;
+    top: 5px;
+    left: 4px;
+    border-color: rgb(234, 245, 255);
+    transition: -webkit-transform 0.3s ease 0s, transform 0.3s ease 0s, height 0.3s ease 0s, width 0.3s ease 0s;
+    transform: rotate(225deg);
+}
+
+
+.step-bullet-not-done {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgb(68, 68, 68);
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    transition: background-color 0.3s ease 0s;
+}
+
+.step-description,
+[data-css-step-description] {
+    margin-top: 10px;
+}
+*/
+
+.stepper-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.step {
+    position: relative;
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    transition: color 0.3s ease 0s;
+}
+
+.step::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;  
+}
+
+.stepper-wrapper .step:not(:last-child):after {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid #ccc;
+    width: 100%;
+    top: 13px;
+    left: 50%;
+    z-index: 2;
+}
+
+.step.done::after {
+    border-color: var(--dark-plum);
+}
+
+.step .step-bullet {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+    border: 2px solid var(--dark-plum);
+}
+
+.step.done .step-bullet {
+    background-color: var(--white);
+    color: var(--dark-plum);
+
+}
+
+.step.done .step-bullet::after {
+    content: " ";
+    display: block;
+    background: transparent;
+    border-width: 2px;
+    border-style: none none solid solid;
+    position: relative;
+    height: 4px;
+    width: 8px;
+    border-color: var(--dark-plum);
+    transition: -webkit-transform 0.3s ease 0s, transform 0.3s ease 0s, height 0.3s ease 0s, width 0.3s ease 0s;
+    transform: rotate(-45deg);}
+
+.step.done .step-description {
+    color: var(--very-dark-gray);
+}
+
+.step.active .step-bullet {
+    background-color: var(--dark-plum);
+    color: var(--white);
+}
+
+.step.active .step-description {
+    color: var(--dark-plum);
+}
+
+.step.inactive .step-bullet {
+    margin-bottom: 8px;
+    background-color: var(--white);
+    border: 1px solid var(--light-gray);
+    color: var(--light-gray);
+}
+
+.step.inactive .step-description {
+    color: var(--medium-gray);
+    font-weight: 400;
+}

@@ -1,0 +1,209 @@
+.disabled {
+  pointer-events: none;
+}
+
+.multiselect {
+    width: var(--multiselect-width);
+}
+
+.multiselect-label {
+    height: var(--multiselect-height);
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: var(--multiselect-border-size) solid var(--form-element-border);
+}
+
+.nightmode .multiselect-label {
+    border-bottom-color: var(--white);
+}
+
+.required .multiselect-label {
+    border-bottom-color: var(--highlight-red);
+}
+
+.disabled .multiselect-label {
+    border-bottom-color: var(--form-element-label);
+}
+
+.multiselect-title-container {
+    height: var(--multiselect-title-height);
+
+    font-family: 'Gellix';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+
+    color: var(--form-element-label);
+}
+
+.multiselect-toggle-dropdown {
+    height: var(--multiselect-toggle-height);
+    border: none;
+    background: none;
+    padding: 0;
+
+    font-family: 'Gellix';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: var(--multi-checkbox-text);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.nightmode .multiselect-toggle-dropdown {
+    color: var(--white);
+}
+
+.required .multiselect-toggle-dropdown {
+    color: var(--highlight-red);
+}
+
+.disabled .multiselect-toggle-dropdown {
+    color: var(--form-element-label);
+}
+
+.nightmode .multiselect-toggle-dropdown path {
+    stroke: var(--white);
+}
+
+.required .multiselect-toggle-dropdown path {
+    stroke: var(--highlight-red);
+}
+
+.disabled .multiselect-toggle-dropdown path {
+    stroke: var(--form-element-label);
+}
+
+.multiselect:hover.nightmode .multiselect-toggle-dropdown {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.multiselect:hover .multiselect-toggle-dropdown {
+    color: var(--black);
+}
+
+.multiselect-toggle-dropdown:focus {
+    color: var(--pressed)
+}
+
+.multiselect-toggle-dropdown > span {
+    flex: 1;
+    text-align: left;
+}
+
+.this-field-is-required {
+    display: none;
+
+    font-family: 'Gellix';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    
+    color: var(--highlight-red);
+}
+
+.required .this-field-is-required {
+    display: block;
+}
+
+#overlay {
+    display: none;
+    
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+
+    z-index: 100;
+    position: absolute;
+    width: var(--multiselect-width);
+
+    filter: drop-shadow(0px 0px 4px var(--dropdown-shadow));
+}
+
+.multi-checkbox-item-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 12px;
+
+  height: var(--multiselect-item-height);
+
+  background: var(--white);
+
+  font-family: "Gellix";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: var(--pressed);
+
+  border-bottom: var(--multiselect-border-size) solid var(--dropdown-option-border);
+}
+
+.multi-checkbox-item-label:hover {
+  background-color: var(--dropdown-option-hover);
+}
+
+.multi-checkbox-item-input {
+  display: none;
+}
+
+.option-title {
+  flex: 1;
+}
+
+.checkbox-icon {
+  width: var(--checkbox-icon-width);
+  height: var(--checkbox-icon-height);
+}
+
+.multi-checkbox-item-input:checked ~ .option-title {
+  font-family: "Gellix";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: var(--medium-plum);
+}
+
+.multi-checkbox-item-input:checked ~ .checkbox-icon-container .checkbox-icon-default {
+  display: none;
+}
+
+.multi-checkbox-item-input:not(:checked) ~ .checkbox-icon-container .checkbox-icon-checked {
+  display: none;
+}
+
+.multi-checkbox-item-label.nightmode {
+  background-color: var(--nightmode-dropdown);
+  color: var(--white);
+  border-color: var(--dark-plum);
+}
+
+.multi-checkbox-item-label:hover.nightmode {
+  background-color: var(--nightmode-dropdown-hover);
+}
+
+.nightmode input:checked ~ .option-title {
+  color: var(--light-plum);
+}

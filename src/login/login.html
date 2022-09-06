@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="conatiner">
+    <noscript>You need to enable JavaScript to run this app</noscript>
+    <div>
+      <!-- <div id="root"> -->
+      <section class="ant-layout" style="min-height: 100vh; height: 100vh">
+        <main class="ant-layout-content login-content">
+          <div class="login-container">
+            <div class="right-image-container"></div>
+            <section class="side-container">
+              <!-- TITLE LOGO SLOT -->
+              <div class="title-logo">
+                <slot name="titleLogo"></slot>
+              </div>
+              <h1 id="titleText"></h1>
+              <div class="signin-container">
+                <h2 id="textPrompt">Sign in with your account</h2>
+                <p id="descriptionText"></p>
+                <input type="text"  id="userInput" class="username-input" placeholder="username">
+                <div class="buttons">
+                  <button id="signInButton" class="sign-in-button">Sign In</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </section>
+    </div>
+  </div>
+</div>

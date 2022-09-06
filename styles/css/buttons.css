@@ -1,0 +1,72 @@
+button[disabled],
+button[disabled]:active,
+button[disabled]:hover {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: var(--btn-padding-h, 12px) var(--btn-padding-v, 32px);
+    gap: 10px;
+    border-radius: var(--btn-border-radius, 3px);
+    font-family: 'Gellix';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.btn-primary {
+    border: var(--btn-border-width, 3px) solid var(--dark-blue);
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    border: var(--btn-border-width, 3px) solid var(--white);
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+.btn-primary:active {
+    border: var(--btn-border-width, 3px) solid var(--ultra-light-blue);
+    background-color: var(--ultra-light-blue);
+    color: var(--pressed);
+}
+
+.btn-secondary {
+    border: var(--btn-border-width, 3px) solid var(--dark-blue);
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+.btn-secondary:hover {
+    border: var(--btn-border-width, 3px) solid var(--white);
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+.btn-secondary:active {
+    border: var(--btn-border-width, 3px) solid var(--dark-blue);
+    background-color: var(--ultra-light-blue);
+    color: var(--dark-blue);
+}
+
+.btn-primary>svg>path {
+    fill: var(--light-blue);
+}
+
+.btn-primary:active>svg>path {
+    fill: var(--medium-blue);
+}
+
+.btn-secondary>svg>path {
+    fill: var(--dark-blue);
+}

@@ -1,0 +1,12 @@
+.checkbox-icon {
+  width: var(--checkbox-icon-width);
+  height: var(--checkbox-icon-height);
+}
+
+.checkbox-icon-container.checked .checkbox-icon-default {
+  display: none;
+}
+
+.checkbox-icon-container:not(.checked) .checkbox-icon-checked {
+  display: none;
+}

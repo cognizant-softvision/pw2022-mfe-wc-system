@@ -1,0 +1,24 @@
+:root {
+    /* layout */
+    --big-gap: 50px;
+    --medium-gap: 25px;
+    --small-gap: 10px;
+
+    /* buttons */
+    --btn-padding-h: 12px;
+    --btn-padding-v: 32px;
+    --btn-border-width: 3px;
+    --btn-border-radius: 3px;
+
+    /* multiselect */
+    --multiselect-width: 300px;
+    --multiselect-height: 58px;
+    --multiselect-title-height: 24px;
+    --multiselect-toggle-height: 34px;
+    --multiselect-border-size: 1px;
+    --multiselect-item-height: 56px;
+
+    /* checkbox-icon */
+    --checkbox-icon-width: 32px;
+    --checkbox-icon-height: 32px;
+}

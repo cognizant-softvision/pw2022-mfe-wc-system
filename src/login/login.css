@@ -1,0 +1,345 @@
+/* 
+  Images and fonts provided on index.
+  In the future, there will be a CDN for that.
+*/
+
+ h1 {
+  font-size: 40px;
+  text-align: center;
+}
+ .googleSignIn {
+  cursor: pointer;
+ }
+ .customGoogleSSOBtn {
+  background-color: rgb(255, 255, 255);
+  display: inline-flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
+  padding: 0px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+ }
+ .customGoogleSSOBtn--disabled {
+  cursor: auto
+ }
+
+.wrapper > .conatiner {
+  overflow: hidden;
+}
+
+.conatiner {
+  margin: 0;
+  padding: 0;
+  font-family: Gellix, sans-serif;
+}
+
+/* Mobile  */
+
+.right-image-container {
+  display: none;
+}
+
+.circle {
+  display: none;
+}
+
+.login-container {
+  width: 100vw;
+  background-color: #ffff;
+  min-height: 100vh;
+  background-image: url("/img/login/loginBackground.svg");
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+.side-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+}
+
+.logo {
+  height: fit-content;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cvCreator-logo {
+  width: 100px;
+}
+
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  text-align: center;
+}
+
+.signin-container h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-family: Gellix, sans-serif;
+  font-weight: bold;
+  line-height: 36px;
+  color: #000048;
+}
+
+.signin-container p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 768px) {
+  .wrapper > .conatiner {
+    overflow: auto;
+  }
+
+  .side-container {
+    max-width: 468px;
+    margin: 0 auto;
+  }
+
+  .circle {
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+  }
+
+  .signin-container {
+    margin-bottom: 100px;
+    width: 100%;
+  }
+
+  .signin-container h2 {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .signin-container p {
+    width: 357px;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 48px;
+  }
+
+  .wc-img-mb {
+    width: auto;
+    border-top-style: none;
+    border-bottom-style: none;
+    position: relative;
+    top: -100px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapper > .conatiner {
+    overflow: auto;
+  }
+
+  .wc-img-mb {
+    width: auto;
+    border-top-style: none;
+    border-bottom-style: none;
+    position: relative;
+    top: -100px;
+  }
+
+  .signin-container {
+    padding-bottom: 150px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper > .conatiner {
+    overflow: hidden;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .right-image-container {
+    display: block;
+    width: 60%;
+    background-color: #00043e;
+    background-image: url("/img/login/login.png");
+    background-position: 0% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+
+  .side-container {
+    width: 40%;
+  }
+
+  .wc-image {
+    width: 100%;
+  }
+
+  .wc-img-mb {
+    display: none;
+  }
+}
+.sign-in-button {
+  padding: 15px;
+  background: rgb(45, 112, 153);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.sign-in-button:hover {
+  opacity: 0.8;
+}
+.username-input {
+  margin: 10px;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cvCreator-logo {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.cognizant-logo {
+  width: 200px;
+  height: 100px;
+}
+
+@media only screen and (min-width: 1824px) {
+  .wrapper > .conatiner {
+    overflow: hidden;
+  }
+
+  .right-image-container {
+    display: block;
+    width: 60%;
+    background-color: #00043e;
+    background-image: url("localhost:5000/login.png");
+    background-position: 0% 50%;
+    /*  */
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+}
+
+/* For landscape mobile and tablet sizes */
+
+@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 780px) {
+  .wc-img-mb {
+    width: 120px;
+  }
+
+  .title-container {
+    padding: 0;
+  }
+
+  .title-logo {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .cvCreator-logo {
+    width: 40%;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .signin-container {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .signin-container h2 {
+    font-size: 30px;
+    line-height: 44px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .signin-container p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-device-width: 780px) and (max-device-width: 1400px) and (orientation: landscape) {
+  .cvCreator-logo {
+    width: 40%;
+  }
+
+  .wc-img-mb {
+    display: block;
+    width: 100px;
+  }
+
+  .title-container {
+    padding: 0;
+  }
+
+  .logo {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .signin-container {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .signin-container h2 {
+    font-size: 20px;
+    line-height: 44px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .signin-container p {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .right-image-container {
+    display: none;
+  }
+}

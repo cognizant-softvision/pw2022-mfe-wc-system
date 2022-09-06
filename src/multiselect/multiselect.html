@@ -1,0 +1,23 @@
+<div class="multiselect">
+    <label class="multiselect-label">
+        <div class="multiselect-title-container">
+            <slot name="label">No label in this multiselect</slot>
+        </div>
+
+        <button class="multiselect-toggle-dropdown">
+            <span id="selection-text">Select...</span>
+
+            <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.5L8.49994 8.49994L15.5 1.5" stroke="#222222" stroke-width="1.43609" />
+            </svg>
+        </button>
+    </label>
+
+    <div class="this-field-is-required">This field is required</div>
+
+    <div id="overlay"></div>
+
+    <div id="checkboxes">
+        <slot id="options-slot">No options in this multiselect</slot>
+    </div>
+</div>
