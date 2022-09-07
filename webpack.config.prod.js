@@ -10,6 +10,7 @@ const { REMOTE } = process.env;
 const path = require("path");
 
 module.exports = {
+  mode: "production",
   entry: { 
     web_components: path.resolve(__dirname, "./src/define-all-elements.js"),
     styles: path.resolve(__dirname, "./styles/css/styles.js"),
@@ -19,7 +20,6 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
     publicPath: REMOTE,
   },
-  mode: "development",
   optimization: {
     minimizer: [new CssMinimizerPlugin()],
     minimize: true,
