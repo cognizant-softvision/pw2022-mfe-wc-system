@@ -6,7 +6,6 @@ button[disabled]:hover {
     opacity: 0.3;
 }
 
-
 .btn {
     cursor: pointer;
     text-decoration: none;
